@@ -735,7 +735,16 @@ html.intro-lock { overflow: hidden; }
   .hero__hours-wink { margin-left: 0; }
 
   .esprit__grid { grid-template-columns: 1fr; }
-  .esprit__photos { max-width: 92%; margin-top: 2.8rem; }
+  /* mobile : photos empilées, plus de superposition */
+  .esprit__photos { max-width: 100%; margin-top: 2.8rem; padding-bottom: 0; }
+  .esprit__photo-main { width: 100%; }
+  .esprit__photo-detail {
+    position: static;
+    width: 62%;
+    margin: 1.6rem 0 0 auto;
+    outline: none;
+  }
+  .esprit__photo-detail .img-reveal { outline: none; }
 
   .carte__cols { grid-template-columns: 1fr; padding-top: 1.4rem; }
   .carte__col ul { margin-bottom: 1.4rem; }
@@ -764,7 +773,7 @@ html.intro-lock { overflow: hidden; }
   .hero__title { font-size: clamp(3.4rem, 19vw, 5rem); }
   .hero__photo { max-width: 100%; }
   .esprit__photo-detail { outline-width: 4px; }
-  .stamp { width: 92px; height: 92px; right: 2%; }
+  .stamp { width: 96px; height: 96px; right: 2%; font-size: 0.55rem; }
   .carte__band { grid-template-columns: 1fr; }
   .carte__band figure:last-child .img-reveal { aspect-ratio: 4 / 3; }
   .carte__midi-photo { max-width: 100%; }
