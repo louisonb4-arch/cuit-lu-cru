@@ -8,12 +8,17 @@
   }
 
   // ---------- Refresh = retour sur le hero ----------
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-  window.scrollTo(0, 0);
-  window.addEventListener('pageshow', function (e) {
-    if (e.persisted) window.scrollTo(0, 0);
-  });
+  // Uniquement sur la page d'accueil : ailleurs (pages légales), une ancre
+  // comme #cookies doit rester une ancre et emmener le lecteur au bon endroit.
+  var hasHero = !!document.querySelector('.hero');
+  if (hasHero) {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    window.scrollTo(0, 0);
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) window.scrollTo(0, 0);
+    });
+  }
 
   // ---------- Reveal au scroll ----------
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -12,9 +12,8 @@
   <meta property="og:image" content="https://www.nantes.restaurant/assets/salle.jpg">
   <meta property="og:locale" content="fr_FR">
   <link rel="icon" href="assets/logo.gif">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/font/young-serif-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/font/hanken-grotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -474,10 +473,16 @@
         <p class="mono footer__label">Services</p>
         <p>Déjeuner 12h01 – 13h30<br>Dîner 19h31 – 21h30</p>
       </div>
+      <div>
+        <p class="mono footer__label">Le site</p>
+        <p><a href="mentions-legales.html">Mentions légales</a></p>
+        <p><a href="confidentialite.html">Confidentialité</a> · <a href="confidentialite.html#cookies">Cookies</a></p>
+      </div>
     </div>
     <div class="footer__base">
       <p class="mono">© <span id="year">2026</span> Cuit Lu Cru — restaurant fait maison, Nantes</p>
       <p class="mono">Depuis 2017 · viande origine France · poisson sauvage</p>
+      <p class="mono">Création <a href="https://vokumagency.com" target="_blank" rel="noopener">Vokum</a></p>
     </div>
   </footer>
 
